@@ -31,6 +31,16 @@ class CalcController {
             element.addEventListener(event, fn, false);
         })
     }
+    execBtn(value){
+        switch (key) {
+            case 'ac':
+                
+                break;
+        
+            default:
+                break;
+        }
+    }
 
     initButtonsEvents(){
 
@@ -39,7 +49,10 @@ class CalcController {
         buttons.forEach((btn, index) => {
             
            this.addEventListenerAll(btn, 'click drag', e => {
-               console.log(btn.className.baseVal.replace('btn-', ''));
+               let textBtn = btn.className.baseVal.replace('btn-', '');
+
+               this.execBtn(textBtn);
+
            })
 
            this.addEventListenerAll(btn, 'mouseover mouseup mousedown', e => {
